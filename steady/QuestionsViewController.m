@@ -8,6 +8,7 @@
 
 #import "QuestionsViewController.h"
 #import "HawtTableView.h"
+#import "QuestionTableViewCell.h"
 
 NSString *const QUESTIONS = @"questions";
 NSString *const SCORE = @"score";
@@ -85,8 +86,8 @@ NSString *const SCORE = @"score";
 }
 
 #pragma mark Table View
--(UITableViewCell *)tableView:(HawtTableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *cell = [[UITableViewCell alloc]init];
+-(QuestionTableViewCell *)tableView:(HawtTableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    QuestionTableViewCell *cell = [[QuestionTableViewCell alloc]init];
 
     if ([tableView.name isEqualToString:QUESTIONS]){
         cell.textLabel.text = [_questionsArray objectAtIndex:indexPath.row];

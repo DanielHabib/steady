@@ -18,6 +18,7 @@
 		1A609A981C83AE0E0024824E /* AppsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A609A971C83AE0E0024824E /* AppsViewController.m */; };
 		1A609A9B1C83BAFC0024824E /* QuestionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A609A9A1C83BAFC0024824E /* QuestionsViewController.m */; };
 		1A609A9E1C83C7D30024824E /* HawtTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A609A9D1C83C7D30024824E /* HawtTableView.m */; };
+		1A609AA11C852F4A0024824E /* QuestionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A609AA01C852F4A0024824E /* QuestionTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,8 @@
 		1A609A9A1C83BAFC0024824E /* QuestionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionsViewController.m; sourceTree = "<group>"; };
 		1A609A9C1C83C7D30024824E /* HawtTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HawtTableView.h; sourceTree = "<group>"; };
 		1A609A9D1C83C7D30024824E /* HawtTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HawtTableView.m; sourceTree = "<group>"; };
+		1A609A9F1C852F4A0024824E /* QuestionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionTableViewCell.h; sourceTree = "<group>"; };
+		1A609AA01C852F4A0024824E /* QuestionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +128,8 @@
 				1A609A711C7FCFFC0024824E /* Info.plist */,
 				1A609A691C7FCFFC0024824E /* steady.xcdatamodeld */,
 				1A609A601C7FCFFC0024824E /* Supporting Files */,
+				1A609A9F1C852F4A0024824E /* QuestionTableViewCell.h */,
+				1A609AA01C852F4A0024824E /* QuestionTableViewCell.m */,
 			);
 			path = steady;
 			sourceTree = "<group>";
@@ -289,6 +294,7 @@
 				1A609A6B1C7FCFFC0024824E /* steady.xcdatamodeld in Sources */,
 				1A609A981C83AE0E0024824E /* AppsViewController.m in Sources */,
 				1A609A651C7FCFFC0024824E /* AppDelegate.m in Sources */,
+				1A609AA11C852F4A0024824E /* QuestionTableViewCell.m in Sources */,
 				1A609A621C7FCFFC0024824E /* main.m in Sources */,
 				1A609A9E1C83C7D30024824E /* HawtTableView.m in Sources */,
 			);
@@ -508,6 +514,7 @@
 				1A609A8C1C7FCFFC0024824E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1A609A8D1C7FCFFC0024824E /* Build configuration list for PBXNativeTarget "steadyTests" */ = {
 			isa = XCConfigurationList;
@@ -516,6 +523,7 @@
 				1A609A8F1C7FCFFC0024824E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1A609A901C7FCFFC0024824E /* Build configuration list for PBXNativeTarget "steadyUITests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +532,7 @@
 				1A609A921C7FCFFC0024824E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
