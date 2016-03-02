@@ -19,6 +19,7 @@
 		1A609A9B1C83BAFC0024824E /* QuestionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A609A9A1C83BAFC0024824E /* QuestionsViewController.m */; };
 		1A609A9E1C83C7D30024824E /* HawtTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A609A9D1C83C7D30024824E /* HawtTableView.m */; };
 		1A609AA11C852F4A0024824E /* QuestionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A609AA01C852F4A0024824E /* QuestionTableViewCell.m */; };
+		1A66E0711C87A00900E71255 /* ResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A66E0701C87A00900E71255 /* ResultsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,8 @@
 		1A609A9D1C83C7D30024824E /* HawtTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HawtTableView.m; sourceTree = "<group>"; };
 		1A609A9F1C852F4A0024824E /* QuestionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionTableViewCell.h; sourceTree = "<group>"; };
 		1A609AA01C852F4A0024824E /* QuestionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionTableViewCell.m; sourceTree = "<group>"; };
+		1A66E06F1C87A00900E71255 /* ResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsViewController.h; sourceTree = "<group>"; };
+		1A66E0701C87A00900E71255 /* ResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,13 +126,15 @@
 				1A609A9A1C83BAFC0024824E /* QuestionsViewController.m */,
 				1A609A9C1C83C7D30024824E /* HawtTableView.h */,
 				1A609A9D1C83C7D30024824E /* HawtTableView.m */,
+				1A609A9F1C852F4A0024824E /* QuestionTableViewCell.h */,
+				1A609AA01C852F4A0024824E /* QuestionTableViewCell.m */,
+				1A66E06F1C87A00900E71255 /* ResultsViewController.h */,
+				1A66E0701C87A00900E71255 /* ResultsViewController.m */,
 				1A609A6C1C7FCFFC0024824E /* Main.storyboard */,
 				1A609A6F1C7FCFFC0024824E /* Assets.xcassets */,
 				1A609A711C7FCFFC0024824E /* Info.plist */,
 				1A609A691C7FCFFC0024824E /* steady.xcdatamodeld */,
 				1A609A601C7FCFFC0024824E /* Supporting Files */,
-				1A609A9F1C852F4A0024824E /* QuestionTableViewCell.h */,
-				1A609AA01C852F4A0024824E /* QuestionTableViewCell.m */,
 			);
 			path = steady;
 			sourceTree = "<group>";
@@ -295,6 +300,7 @@
 				1A609A981C83AE0E0024824E /* AppsViewController.m in Sources */,
 				1A609A651C7FCFFC0024824E /* AppDelegate.m in Sources */,
 				1A609AA11C852F4A0024824E /* QuestionTableViewCell.m in Sources */,
+				1A66E0711C87A00900E71255 /* ResultsViewController.m in Sources */,
 				1A609A621C7FCFFC0024824E /* main.m in Sources */,
 				1A609A9E1C83C7D30024824E /* HawtTableView.m in Sources */,
 			);

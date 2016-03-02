@@ -57,6 +57,7 @@ NSString *const SCORE = @"score";
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 -(void)initializeQuestionsTableView{
     HawtTableView * tableView = [[HawtTableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width/2, 600) style:UITableViewStylePlain];
     tableView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
