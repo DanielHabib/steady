@@ -62,7 +62,8 @@
 -(void)segueToApps{
     AppsViewController * controller = [[AppsViewController alloc] init];
     NSLog(@"Segue Activated");
-    [self presentViewController:controller animated:NO completion:nil];
+    [self.navigationController pushViewController:controller animated:NO];
+//    [self presentViewController:controller animated:NO completion:nil];
 }
 
 //-(UIView *)preferredFocusedView{

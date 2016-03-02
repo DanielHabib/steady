@@ -68,7 +68,8 @@
 -(void)segueToApps{
     QuestionsViewController * controller = [[QuestionsViewController alloc] init];
     NSLog(@"Segue Activated");
-    [self presentViewController:controller animated:NO completion:nil];
+    [self.navigationController pushViewController:controller animated:NO];
+//    [self presentViewController:controller animated:NO completion:nil];
 }
 
 

@@ -117,6 +117,7 @@ NSString *const SCORE = @"score";
 
 -(void)submitQuestions{
     NSLog(@"Submit Questions Hit!");
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 
