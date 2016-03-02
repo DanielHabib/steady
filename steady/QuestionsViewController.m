@@ -16,6 +16,9 @@ NSString *const SCORE = @"score";
 @interface QuestionsViewController (){
     NSArray * _questionsArray;
     NSArray * _scoreArray;
+    
+    HawtTableView * _questionsTableView;
+    HawtTableView * _scoreTableView;
 }
 
 @end
@@ -57,6 +60,7 @@ NSString *const SCORE = @"score";
     tableView.backgroundColor = [UIColor greenColor];
     tableView.dataSource = self;
     tableView.delegate = self;
+    _questionsTableView = tableView;
     [self.view addSubview:tableView];
 }
 -(void)initializePickerView{
@@ -81,6 +85,9 @@ NSString *const SCORE = @"score";
     submitLabel.text = @"Submit!";
     submitLabel.font = [UIFont fontWithName:@"Times" size:40];
     submitLabel.textAlignment = NSTextAlignmentCenter;
+
+    _scoreTableView = tableView;
+    tableView.alpha = 0;
     [footer addSubview:submitLabel];
     tableView.tableFooterView = footer;
 }
@@ -104,6 +111,7 @@ NSString *const SCORE = @"score";
 {
     if ([tableView.name isEqualToString:QUESTIONS]){
         NSLog(@"Question Selected %@", [_questionsArray objectAtIndex:indexPath.row]);
+        _scoreTableView.alpha = 1;
     } else if ([tableView.name isEqualToString:SCORE]) {
         NSLog(@"Score Selected %ld", (long)indexPath.row);
     }
