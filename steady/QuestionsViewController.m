@@ -73,8 +73,15 @@ NSString *const SCORE = @"score";
     UIButton * submitButton = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width/2, 100)];
     [submitButton setTitle:@"Submit" forState:UIControlStateNormal];
     [footer addSubview:submitButton];
+    
     tableView.tableFooterView = footer;
+    
+    [submitButton addTarget:self
+                     action:@selector(submitQuestions)
+           forControlEvents:UIControlEventPrimaryActionTriggered];
+    
 }
+
 -(void)initializeScoreTableView{
     HawtTableView * tableView = [[HawtTableView alloc] initWithFrame:CGRectMake(self.view.frame.size.width/2, 0, self.view.frame.size.width/2, self.view.frame.size.height) style:UITableViewStylePlain];
     tableView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
@@ -85,14 +92,18 @@ NSString *const SCORE = @"score";
     
     UIView * footer = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 200, 100)];
     footer.backgroundColor = [UIColor greenColor];
+    
     UIView * header = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 200, 100)];
     header.backgroundColor = [UIColor greenColor];
+    
     UILabel * headerLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width/2, 100)];
     headerLabel.text = @"Score!";
     headerLabel.font = [UIFont fontWithName:@"Times" size:40];
     headerLabel.textAlignment = NSTextAlignmentCenter;
     [header addSubview:headerLabel];
+    
     tableView.tableHeaderView = header;
+    
     UILabel * submitLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width/2, 100)];
     submitLabel.text = @"Submit!";
     submitLabel.font = [UIFont fontWithName:@"Times" size:40];
@@ -103,6 +114,11 @@ NSString *const SCORE = @"score";
     [footer addSubview:submitLabel];
     tableView.tableFooterView = footer;
 }
+
+-(void)submitQuestions{
+    NSLog(@"Submit Questions Hit!");
+}
+
 
 #pragma mark Table View
 -(UITableViewCell *)tableView:(HawtTableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
