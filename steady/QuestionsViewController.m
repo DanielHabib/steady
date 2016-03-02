@@ -26,10 +26,14 @@ NSString *const SCORE = @"score";
 @implementation QuestionsViewController
 
 - (void)viewDidLoad {
+    
     _questionsArray = @[
                    @"Lorem Ipsum",
                    @"Lorem Ipsum",
+                   @"Lorem Ipsum",
+                   @"Lorem Ipsum",
                    @"Lorem Ipsum"];
+    
     _scoreArray = @[
                    @"0",
                    @"1",
@@ -44,8 +48,8 @@ NSString *const SCORE = @"score";
                    @"10"];
 
     [super viewDidLoad];
-    [self initializeTableView];
-    [self initializePickerView];
+    [self initializeQuestionsTableView];
+    [self initializeScoreTableView];
     // Do any additional setup after loading the view.
 }
 
@@ -53,7 +57,7 @@ NSString *const SCORE = @"score";
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
--(void)initializeTableView{
+-(void)initializeQuestionsTableView{
     HawtTableView * tableView = [[HawtTableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width/2, 600) style:UITableViewStylePlain];
     tableView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
     tableView.name = QUESTIONS;
@@ -62,8 +66,16 @@ NSString *const SCORE = @"score";
     tableView.delegate = self;
     _questionsTableView = tableView;
     [self.view addSubview:tableView];
+    
+    UIView * footer = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 200, 100)];
+    footer.backgroundColor = [UIColor greenColor];
+    
+    UIButton * submitButton = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width/2, 100)];
+    [submitButton setTitle:@"Submit" forState:UIControlStateNormal];
+    [footer addSubview:submitButton];
+    tableView.tableFooterView = footer;
 }
--(void)initializePickerView{
+-(void)initializeScoreTableView{
     HawtTableView * tableView = [[HawtTableView alloc] initWithFrame:CGRectMake(self.view.frame.size.width/2, 0, self.view.frame.size.width/2, self.view.frame.size.height) style:UITableViewStylePlain];
     tableView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
     tableView.name = SCORE;
@@ -107,6 +119,7 @@ NSString *const SCORE = @"score";
     cell.userInteractionEnabled = YES;
     return cell;
 }
+
 -(void)tableView:(HawtTableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if ([tableView.name isEqualToString:QUESTIONS]){
@@ -122,14 +135,15 @@ NSString *const SCORE = @"score";
     }
     NSLog(@"SELECTED");
 }
+
 - (NSInteger)tableView:(HawtTableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     if ([tableView.name isEqualToString:QUESTIONS]){
         return [_questionsArray count];
     }
     return [_scoreArray count];
-
 }
+
 -(void)toggleAlpha:(UIView *)view {
     if (view.alpha > 0.0) {
         view.alpha = 0.0;
@@ -137,10 +151,12 @@ NSString *const SCORE = @"score";
         view.alpha = 1.0;
     }
 }
+
 - (NSInteger)numberOfSectionsInTableView:(HawtTableView *)tableView
 {
     return 1;
 }
+
 - (CGFloat)tableView:(HawtTableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
     return 30;
