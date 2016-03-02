@@ -114,6 +114,9 @@ NSString *const SCORE = @"score";
         _scoreTableView.alpha = 1;
     } else if ([tableView.name isEqualToString:SCORE]) {
         NSLog(@"Score Selected %ld", (long)indexPath.row);
+        NSIndexPath * selectedQuestionIndex = [_questionsTableView indexPathForSelectedRow];
+        NSIndexPath * selectedScoreIndex = [_scoreTableView indexPathForSelectedRow];
+        
     }
     NSLog(@"SELECTED");
 }
@@ -124,6 +127,13 @@ NSString *const SCORE = @"score";
     }
     return [_scoreArray count];
 
+}
+-(void)toggleAlpha:(UIView *)view {
+    if (view.alpha > 0.0) {
+        view.alpha = 0.0;
+    } else {
+        view.alpha = 1.0;
+    }
 }
 - (NSInteger)numberOfSectionsInTableView:(HawtTableView *)tableView
 {
