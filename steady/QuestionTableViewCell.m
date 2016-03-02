@@ -14,7 +14,7 @@
     // Initialization code
 
     _questionLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, self.frame.size.height/2, self.frame.size.width - self.frame.size.width/5, self.frame.size.height/4)];
-    _questionLabel.backgroundColor = [UIColor brownColor];
+    _questionLabel.backgroundColor = [UIColor yellowColor];
     _questionLabel.textAlignment = NSTextAlignmentCenter;
     
     [self addSubview:_questionLabel];

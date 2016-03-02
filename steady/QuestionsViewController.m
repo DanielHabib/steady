@@ -93,7 +93,7 @@ NSString *const SCORE = @"score";
 }
 
 #pragma mark Table View
--(QuestionTableViewCell *)tableView:(HawtTableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+-(UITableViewCell *)tableView:(HawtTableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     QuestionTableViewCell *cell = [[QuestionTableViewCell alloc]init];
 
     if ([tableView.name isEqualToString:QUESTIONS]){
@@ -117,6 +117,8 @@ NSString *const SCORE = @"score";
         NSIndexPath * selectedQuestionIndex = [_questionsTableView indexPathForSelectedRow];
         NSIndexPath * selectedScoreIndex = [_scoreTableView indexPathForSelectedRow];
         
+        QuestionTableViewCell * cell = [_questionsTableView cellForRowAtIndexPath:selectedQuestionIndex];
+        cell.scoreLabel.text = [_scoreTableView cellForRowAtIndexPath:selectedScoreIndex].textLabel.text;
     }
     NSLog(@"SELECTED");
 }
