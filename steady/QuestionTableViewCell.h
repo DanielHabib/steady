@@ -10,4 +10,7 @@
 
 @interface QuestionTableViewCell : UITableViewCell
 
+@property UILabel * questionLabel;
+@property UILabel * scoreLabel;
+
 @end
