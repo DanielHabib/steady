@@ -51,19 +51,10 @@
     NSLog(@"TAPPED");
 }
 
-- (void)didUpdateFocusInContext:(UIFocusUpdateContext *)context withAnimationCoordinator:(UIFocusAnimationCoordinator *)coordinator
-{
-    context.nextFocusedView.layer.shadowOffset = CGSizeMake(0, 10);
-    context.nextFocusedView.layer.shadowOpacity = 0.6;
-    context.nextFocusedView.layer.shadowRadius = 15;
-    context.nextFocusedView.layer.shadowColor = [UIColor blackColor].CGColor;
-    context.previouslyFocusedView.layer.shadowOpacity = 0;
-}
 -(void)segueToApps{
     AppsViewController * controller = [[AppsViewController alloc] init];
     NSLog(@"Segue Activated");
-    [self.navigationController pushViewController:controller animated:NO];
-//    [self presentViewController:controller animated:NO completion:nil];
+    [self presentViewController:controller animated:NO completion:nil];
 }
 
 //-(UIView *)preferredFocusedView{

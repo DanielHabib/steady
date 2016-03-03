@@ -1,18 +1,18 @@
 //
-//  ResultsViewController.m
+//  HawtViewController.m
 //  steady
 //
 //  Created by Daniel.Habib on 3/2/16.
 //  Copyright © 2016 HawtLava. All rights reserved.
 //
 
-#import "ResultsViewController.h"
+#import "HawtViewController.h"
 
-@interface ResultsViewController ()
+@interface HawtViewController ()
 
 @end
 
-@implementation ResultsViewController
+@implementation HawtViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -24,14 +24,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)didUpdateFocusInContext:(UIFocusUpdateContext *)context withAnimationCoordinator:(UIFocusAnimationCoordinator *)coordinator
-{
-    context.nextFocusedView.layer.shadowOffset = CGSizeMake(0, 10);
-    context.nextFocusedView.layer.shadowOpacity = 0.6;
-    context.nextFocusedView.layer.shadowRadius = 15;
-    context.nextFocusedView.layer.shadowColor = [UIColor blackColor].CGColor;
-    context.previouslyFocusedView.layer.shadowOpacity = 0;
-}
 /*
 #pragma mark - Navigation
 
@@ -41,5 +33,13 @@
     // Pass the selected object to the new view controller.
 }
 */
+- (void)didUpdateFocusInContext:(UIFocusUpdateContext *)context withAnimationCoordinator:(UIFocusAnimationCoordinator *)coordinator
+{
+    context.nextFocusedView.layer.shadowOffset = CGSizeMake(0, 10);
+    context.nextFocusedView.layer.shadowOpacity = 0.6;
+    context.nextFocusedView.layer.shadowRadius = 15;
+    context.nextFocusedView.layer.shadowColor = [UIColor blackColor].CGColor;
+    context.previouslyFocusedView.layer.shadowOpacity = 0;
+}
 
 @end

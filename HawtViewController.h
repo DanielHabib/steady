@@ -1,5 +1,5 @@
 //
-//  ResultsViewController.h
+//  HawtViewController.h
 //  steady
 //
 //  Created by Daniel.Habib on 3/2/16.
@@ -7,8 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "HawtViewController.h"
 
-@interface ResultsViewController : HawtViewController
+@interface HawtViewController : UIViewController
 
 @end

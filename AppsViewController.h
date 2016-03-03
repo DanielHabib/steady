@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HawtViewController.h"
 
-@interface AppsViewController : UIViewController 
+@interface AppsViewController : HawtViewController
 
 @end

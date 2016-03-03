@@ -8,6 +8,7 @@
 
 #import "QuestionsViewController.h"
 #import "HawtTableView.h"
+#import "ResultsViewController.h"
 #import "QuestionTableViewCell.h"
 
 NSString *const QUESTIONS = @"questions";
@@ -118,7 +119,8 @@ NSString *const SCORE = @"score";
 
 -(void)submitQuestions{
     NSLog(@"Submit Questions Hit!");
-    [self.navigationController popViewControllerAnimated:YES];
+    ResultsViewController * controller = [[ResultsViewController alloc] init];
+    [self presentViewController:controller animated:NO completion:nil];
 }
 
 
@@ -127,7 +129,9 @@ NSString *const SCORE = @"score";
     QuestionTableViewCell *cell = [[QuestionTableViewCell alloc]init];
 
     if ([tableView.name isEqualToString:QUESTIONS]){
-        cell.textLabel.text = [_questionsArray objectAtIndex:indexPath.row];
+//        cell.textLabel.text = [_questionsArray objectAtIndex:indexPath.row];
+        cell.questionLabel.text = [_questionsArray objectAtIndex:indexPath.row];
+        cell.scoreLabel.text = @"SCOIRHEW";
     }else if ([tableView.name isEqualToString:SCORE]){
         cell.textLabel.textAlignment = NSTextAlignmentCenter;
         cell.textLabel.text = [_scoreArray objectAtIndex:indexPath.row];

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A4498771C87B8E9002B0212 /* HawtViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4498761C87B8E9002B0212 /* HawtViewController.m */; };
 		1A609A621C7FCFFC0024824E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A609A611C7FCFFC0024824E /* main.m */; };
 		1A609A651C7FCFFC0024824E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A609A641C7FCFFC0024824E /* AppDelegate.m */; };
 		1A609A681C7FCFFC0024824E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A609A671C7FCFFC0024824E /* ViewController.m */; };
@@ -40,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A4498751C87B8E9002B0212 /* HawtViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HawtViewController.h; path = ../HawtViewController.h; sourceTree = "<group>"; };
+		1A4498761C87B8E9002B0212 /* HawtViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HawtViewController.m; path = ../HawtViewController.m; sourceTree = "<group>"; };
 		1A609A5D1C7FCFFC0024824E /* steady.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = steady.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A609A611C7FCFFC0024824E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1A609A631C7FCFFC0024824E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -120,6 +123,8 @@
 				1A609A641C7FCFFC0024824E /* AppDelegate.m */,
 				1A609A661C7FCFFC0024824E /* ViewController.h */,
 				1A609A671C7FCFFC0024824E /* ViewController.m */,
+				1A4498751C87B8E9002B0212 /* HawtViewController.h */,
+				1A4498761C87B8E9002B0212 /* HawtViewController.m */,
 				1A609A961C83AE0E0024824E /* AppsViewController.h */,
 				1A609A971C83AE0E0024824E /* AppsViewController.m */,
 				1A609A991C83BAFC0024824E /* QuestionsViewController.h */,
@@ -300,6 +305,7 @@
 				1A609A981C83AE0E0024824E /* AppsViewController.m in Sources */,
 				1A609A651C7FCFFC0024824E /* AppDelegate.m in Sources */,
 				1A609AA11C852F4A0024824E /* QuestionTableViewCell.m in Sources */,
+				1A4498771C87B8E9002B0212 /* HawtViewController.m in Sources */,
 				1A66E0711C87A00900E71255 /* ResultsViewController.m in Sources */,
 				1A609A621C7FCFFC0024824E /* main.m in Sources */,
 				1A609A9E1C83C7D30024824E /* HawtTableView.m in Sources */,

@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HawtViewController.h"
 
-@interface QuestionsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface QuestionsViewController : HawtViewController <UITableViewDataSource, UITableViewDelegate>
 
 @end
