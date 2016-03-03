@@ -29,11 +29,11 @@ NSString *const SCORE = @"score";
 - (void)viewDidLoad {
     
     _questionsArray = @[
-                   @"Lorem Ipsum",
-                   @"Lorem Ipsum",
-                   @"Lorem Ipsum",
-                   @"Lorem Ipsum",
-                   @"Lorem Ipsum"];
+                   @"Lorem Ipsum 1",
+                   @"Lorem Ipsum 2",
+                   @"Lorem Ipsum 3",
+                   @"Lorem Ipsum 4",
+                   @"Lorem Ipsum 5"];
     
     _scoreArray = @[
                    @"0",
@@ -119,25 +119,41 @@ NSString *const SCORE = @"score";
 
 -(void)submitQuestions{
     NSLog(@"Submit Questions Hit!");
-    ResultsViewController * controller = [[ResultsViewController alloc] init];
-    [self presentViewController:controller animated:NO completion:nil];
+    NSMutableDictionary * results = [[NSMutableDictionary alloc] init];;
+
+    NSArray *cells = [_questionsTableView visibleCells];
+    
+    for (QuestionTableViewCell * cell in cells) {
+        NSLog(@"%@", cell.questionLabel.text);
+        NSLog(@"%@", cell.scoreLabel.text);
+        [results setValue:cell.scoreLabel.text forKey:cell.questionLabel.text];
+    }
+    
+    for (id key in results) {
+        NSLog(@"key: %@, value: %@ \n", key, [results objectForKey:key]);
+    }
+    
+    //    [self bv_jsonStringWithPrettyPrint:results];
+
+//    ResultsViewController * controller = [[ResultsViewController alloc] init];
+//    [self presentViewController:controller animated:NO completion:nil];
 }
 
 
 #pragma mark Table View
 -(UITableViewCell *)tableView:(HawtTableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    QuestionTableViewCell *cell = [[QuestionTableViewCell alloc]init];
+    QuestionTableViewCell *cell = [[QuestionTableViewCell alloc]initWithStyle:UITableViewStylePlain reuseIdentifier:@"Cell"];
 
     if ([tableView.name isEqualToString:QUESTIONS]){
-//        cell.textLabel.text = [_questionsArray objectAtIndex:indexPath.row];
         cell.questionLabel.text = [_questionsArray objectAtIndex:indexPath.row];
         cell.scoreLabel.text = @"SCOIRHEW";
     }else if ([tableView.name isEqualToString:SCORE]){
         cell.textLabel.textAlignment = NSTextAlignmentCenter;
+        [cell purgeLabelsUntilIthinkOfSomethingBetter];
         cell.textLabel.text = [_scoreArray objectAtIndex:indexPath.row];
         
     }
-    cell.selectionStyle = UITableViewCellSelectionStyleBlue;
+    cell.selectionStyle = UITableViewCellSelectionStyleDefault;
     cell.userInteractionEnabled = YES;
     return cell;
 }

@@ -12,5 +12,6 @@
 
 @property UILabel * questionLabel;
 @property UILabel * scoreLabel;
+-(void)purgeLabelsUntilIthinkOfSomethingBetter;
 
 @end
