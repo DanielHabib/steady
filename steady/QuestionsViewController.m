@@ -93,10 +93,7 @@ NSString *const SCORE = @"score";
     tableView.name = SCORE;
     tableView.dataSource = self;
     tableView.delegate = self;
-    [self.view addSubview:tableView];
-    
-    UIView * footer = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 200, 100)];
-    footer.backgroundColor = [UIColor greenColor];
+    [self.view addSubview:tableView]; 
     
     UIView * header = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 200, 100)];
     header.backgroundColor = [UIColor greenColor];
