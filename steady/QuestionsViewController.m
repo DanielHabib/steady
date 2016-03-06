@@ -29,11 +29,13 @@ NSString *const SCORE = @"score";
 - (void)viewDidLoad {
     
     _questionsArray = @[
-                   @"Lorem Ipsum 1",
-                   @"Lorem Ipsum 2",
-                   @"Lorem Ipsum 3",
-                   @"Lorem Ipsum 4",
-                   @"Lorem Ipsum 5"];
+                   @"Did I do my best to appreciate my money",
+                   @"Did I do my best at meditating today",
+                   @"Did I do my best to advance my programming skills",
+                   @"Did I do my best to physically challenge myself",
+                   @"Did I do my best to stay focused at work",
+                   @"Did I do my best to challenge myself mentally",
+                   @"Did I do my best to be nice to people"];
     
     _scoreArray = @[
                    @"0",
@@ -46,7 +48,8 @@ NSString *const SCORE = @"score";
                    @"7",
                    @"8",
                    @"9",
-                   @"10"];
+                   @"10",
+                   @"N/A"];
 
     [super viewDidLoad];
     [self initializeQuestionsTableView];
@@ -60,7 +63,7 @@ NSString *const SCORE = @"score";
 }
 
 -(void)initializeQuestionsTableView{
-    HawtTableView * tableView = [[HawtTableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width/2, 600) style:UITableViewStylePlain];
+    HawtTableView * tableView = [[HawtTableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width/2, self.view.frame.size.height) style:UITableViewStylePlain];
     tableView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
     tableView.name = QUESTIONS;
     tableView.backgroundColor = [UIColor greenColor];
@@ -105,16 +108,9 @@ NSString *const SCORE = @"score";
     [header addSubview:headerLabel];
     
     tableView.tableHeaderView = header;
-    
-    UILabel * submitLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width/2, 100)];
-    submitLabel.text = @"Submit!";
-    submitLabel.font = [UIFont fontWithName:@"Times" size:40];
-    submitLabel.textAlignment = NSTextAlignmentCenter;
 
     _scoreTableView = tableView;
     tableView.alpha = 0;
-    [footer addSubview:submitLabel];
-    tableView.tableFooterView = footer;
 }
 
 -(void)submitQuestions{
@@ -146,7 +142,7 @@ NSString *const SCORE = @"score";
 
     if ([tableView.name isEqualToString:QUESTIONS]){
         cell.questionLabel.text = [_questionsArray objectAtIndex:indexPath.row];
-        cell.scoreLabel.text = @"SCOIRHEW";
+        cell.scoreLabel.text = @"SCORE";
     }else if ([tableView.name isEqualToString:SCORE]){
         cell.textLabel.textAlignment = NSTextAlignmentCenter;
         [cell purgeLabelsUntilIthinkOfSomethingBetter];

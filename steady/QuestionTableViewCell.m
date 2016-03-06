@@ -26,13 +26,13 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         // Initialization code
-        _questionLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width/2, self.frame.size.height)];
+        _questionLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width * 2, self.frame.size.height)];
         _questionLabel.backgroundColor = [UIColor yellowColor];
         _questionLabel.textAlignment = NSTextAlignmentCenter;
         
         [self addSubview:_questionLabel];
         
-        _scoreLabel = [[UILabel alloc] initWithFrame:CGRectMake(_questionLabel.frame.size.width, 0, self.frame.size.width/2, self.frame.size.height)];
+        _scoreLabel = [[UILabel alloc] initWithFrame:CGRectMake(800, 0, self.frame.size.width/2, self.frame.size.height)];
         _scoreLabel.backgroundColor = [UIColor brownColor];
         _scoreLabel.textAlignment = NSTextAlignmentCenter;
         
